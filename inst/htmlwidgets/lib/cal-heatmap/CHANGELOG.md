@@ -1,5 +1,39 @@
 # Changelog
 
+## v3.6.2 [2016-10-09]
+
+* [fix] Fix #217 Month domain and week subdomain not working when week start set to sunday
+
+> From now, 3.x branch will only include bugfixes, all new features will go to 4.x branch
+
+## v3.6.1 [2016-08-30]
+
+* [fix] Fix #207 Locking d3.js version to v3.x
+
+## v3.6.0 [2016-04-24]
+
+* [fix] Fix #183 Fix/add now without highlight
+
+## v3.5.4 [2015-08-24]
+
+* [fix] Update all references to github account new username
+
+## v3.5.3 [2015-07-23]
+
+* [fix] Fix #156 Remove trailing comma in object literal
+* [fix] Fix #161 `domainDynamicDimension` not working with x_week subdomain
+
+## v3.5.2 [2015-02-05]
+
+* [fix] Fix #74: Let `empty` target cells with no data
+
+## v3.5.1 [2015-01-19]
+
+* [fix] Fix #97 Make "class" of all elements more dedicated
+* [fix] Fix #93 Tooltip position due to legendOffset and domainLabel
+* [fix] Fix #89 Add a `.future` class to future subdomain cells
+* [fix] Fix false error output when no callback passed to `destroy()`
+
 ## v3.5.0 [2014-11-12]
 
 * [fix] Fix #84 Fixing highlighting for week subdomain (Dominic Barnes)
