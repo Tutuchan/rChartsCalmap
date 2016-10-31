@@ -3,25 +3,28 @@ HTMLWidgets.widget({
   name: 'calheatmap',
 
   type: 'output',
-
-  initialize: function(el, width, height) {
-    var instance = new CalHeatMap()
-    return instance
-
-  },
-
-  renderValue: function(el, x, instance) {
-
-    x.itemSelector = '#' + el.id
-    if (x.start){
-      x.start = new Date(x.start)
-    }
-    instance.init(x);
-
-  },
-
-  resize: function(el, width, height, instance) {
-
+  
+  factory: function(el, width, height) {
+    var cal = new CalHeatMap();
+    var exists = false;
+    return{
+      renderValue: function(x) {
+        x.itemSelector = '#' + el.id;
+        if (x.start){
+          x.start = new Date(x.start);
+        }
+        if (!exists) {
+          exists = cal.init(x);
+        } else {
+          cal = cal.destroy();
+          cal = new CalHeatMap();
+          cal.init(x);
+        }
+      },
+      resize: function(x, width, height) {
+        cal.resize();
+      },
+      chm: cal
+    };
   }
-
 });
