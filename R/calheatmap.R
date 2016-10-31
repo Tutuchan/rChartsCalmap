@@ -2,7 +2,7 @@
 #'
 #'
 #'
-#' @import htmlwidgets
+#' @importFrom htmlwidgets createWidget shinyWidgetOutput shinyRenderWidget
 #'
 #' @export
 calheatmap <- function(x, y, data, domain, start, ...,
@@ -20,7 +20,7 @@ calheatmap <- function(x, y, data, domain, start, ...,
   )
 
   # create widget
-  htmlwidgets::createWidget(
+  createWidget(
     name = 'calheatmap',
     x,
     width = width,
